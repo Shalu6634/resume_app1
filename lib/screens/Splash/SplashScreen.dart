@@ -1,8 +1,6 @@
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -22,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           height: 100,
           width: 100,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/img/cv.png'),
             ),

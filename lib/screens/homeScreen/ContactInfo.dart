@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -60,7 +59,8 @@ class _ContactInfoState extends State<ContactInfo> {
                           shape: BoxShape.circle,
                           image: (fileImage != null)
                               ? DecorationImage(
-                                  fit: BoxFit.cover, image: FileImage(fileImage!))
+                                  fit: BoxFit.cover,
+                                  image: FileImage(fileImage!))
                               : const DecorationImage(
                                   fit: BoxFit.cover,
                                   image: NetworkImage(
@@ -106,6 +106,7 @@ class _ContactInfoState extends State<ContactInfo> {
                   decoration: const InputDecoration(
                     labelText: 'Full name',
                     focusedBorder: OutlineInputBorder(),
+                    enabledBorder: OutlineInputBorder(),
                   ),
                 ),
               ),
@@ -149,12 +150,55 @@ class _ContactInfoState extends State<ContactInfo> {
                   controller: txtAddress,
                   decoration: const InputDecoration(
                     labelText: 'address',
-                    focusedBorder: OutlineInputBorder(
-                    ),
+                    focusedBorder: OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(),
                   ),
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                width: width * 0.9,
+                height: height * 0.1 - 30,
+                child: TextFormField(
+                  controller: txtAddress,
+                  decoration: const InputDecoration(
+                    labelText: 'Date of Birth',
+                    focusedBorder: OutlineInputBorder(),
+                    enabledBorder: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20, right: 190),
+                child: const Text(
+                  'Delete section',
+                  style: TextStyle(color: Colors.blueGrey, fontSize: 17),
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                indent: 30,
+                endIndent: 210,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 200),
+                child: Container(
+                  height: height * 0.1 - 30,
+                  width: width * 0.3,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Save',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),

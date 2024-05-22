@@ -10,11 +10,11 @@ class AppRoutes
 {
   static Map<String, Widget Function(BuildContext)> routes  =   {
 
-    '/info':(context)=>const SplashScreen(),
+    '/':(context)=>const SplashScreen(),
     '/career':(context)=>const CareerDetail(),
     '/person':(context)=>const PersonalStatement(),
     '/draw':(context) => const DrawerPage(),
-     '/':(context)=> const ContactInfo(),
+     '/info':(context)=> const ContactInfo(),
 
   };
 
