@@ -15,8 +15,7 @@ class _DrawerPageState extends State<DrawerPage> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff153448),
-
+        backgroundColor: Colors.blueGrey,
       ),
       drawer: Drawer(
         child: SingleChildScrollView(
@@ -61,7 +60,7 @@ class _DrawerPageState extends State<DrawerPage> {
                     child: Row(
                       children: [
                         Text(
-                          'CV Engineer  ' ,
+                          'CV Engineer  ',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -86,12 +85,13 @@ class _DrawerPageState extends State<DrawerPage> {
                 },
                 child: const ListTile(
                   leading: Icon(
-                    Icons.call,size: 25,
+                    Icons.call,
+                    size: 25,
                     color: Colors.blueGrey,
                   ),
                   title: Text(
                     'Contact Info',
-                    style: TextStyle(color: Colors.black,fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                 ),
               ),
@@ -101,12 +101,13 @@ class _DrawerPageState extends State<DrawerPage> {
                 },
                 child: const ListTile(
                   leading: Icon(
-                    Icons.person_pin_outlined,size: 25,
+                    Icons.person_pin_outlined,
+                    size: 25,
                     color: Colors.blueGrey,
                   ),
                   title: Text(
                     'Personal Statement',
-                    style: TextStyle(color: Colors.black,fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                 ),
               ),
@@ -114,32 +115,109 @@ class _DrawerPageState extends State<DrawerPage> {
                 onTap: () {
                   Navigator.of(context).pushNamed('/Career');
                 },
-                child:const  ListTile(
+                child: const ListTile(
                   leading: Icon(
-                    Icons.shopping_bag_outlined,size: 25,
+                    Icons.shopping_bag_outlined,
+                    size: 25,
                     color: Colors.blueGrey,
                   ),
                   title: Text(
                     'Career',
-                    style: TextStyle(color: Colors.black,fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).pushNamed('/Education');
+                  Navigator.of(context).pushNamed('/edu');
                 },
-                child:const  ListTile(
+                child: const ListTile(
                   leading: Icon(
-                    Icons.cast_for_education_outlined,size: 25,
+                    Icons.cast_for_education_outlined,
+                    size: 25,
                     color: Colors.blueGrey,
                   ),
                   title: Text(
                     'Education',
-                    style: TextStyle(color: Colors.black,fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                 ),
-              )
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/skill');
+                },
+                child: const ListTile(
+                  leading: Icon(
+                    Icons.key,
+                    size: 25,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    'Key Skills',
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/exp');
+                },
+                child: const ListTile(
+                  leading: Icon(
+                    Icons.person_pin_outlined,
+                    size: 25,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    'Experience',
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/pro');
+                },
+                child: const ListTile(
+                  leading: Icon(
+                    Icons.paste_rounded,
+                    size: 25,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    'Projects',
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/ref');
+                },
+                child: const ListTile(
+                  leading: Icon(
+                    Icons.person_add_alt_1_sharp,
+                    size: 25,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    'Reference',
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  size: 25,
+                  color: Colors.blueGrey,
+                ),
+                title: Text(
+                  'Setting',
+                  style: TextStyle(color: Colors.black, fontSize: 18),
+                ),
+              ),
             ],
           ),
         ),

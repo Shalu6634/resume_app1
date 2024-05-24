@@ -26,15 +26,19 @@ class _ContactInfoState extends State<ContactInfo> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Icon(Icons.settings),
+        ],
         backgroundColor: Color(0xff1a2838),
         leading: GestureDetector(
-            onTap: () {
-              Navigator.of(context).pop();
-            },
-            child: const Icon(
-              Icons.menu,
-              color: Colors.white,
-            )),
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+          child: const Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
         title: Text(
           'Contact Info',
@@ -47,7 +51,6 @@ class _ContactInfoState extends State<ContactInfo> {
           child: Column(
             children: [
               Stack(
-
                 children: [
                   Center(
                     child: Padding(
@@ -171,35 +174,33 @@ class _ContactInfoState extends State<ContactInfo> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20, right: 190),
-                child: const Text(
-                  'Delete section',
-                  style: TextStyle(color: Colors.blueGrey, fontSize: 17),
-                ),
-              ),
-              Divider(
-                thickness: 1,
-                indent: 30,
-                endIndent: 210,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 200),
-                child: Container(
-                  height: height * 0.1 - 30,
-                  width: width * 0.3,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(10)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Delete section',
+                    style: TextStyle(color: Colors.blueGrey, fontSize: 17),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Save',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 40,top: 20),
+                    child: Container(
+                      height: height * 0.1 - 30,
+                      width: width * 0.3,
+                      decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Center(
+                        child: Text(
+                          'Save',
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              )
+                ],
+              ),
+
             ],
           ),
         ),
