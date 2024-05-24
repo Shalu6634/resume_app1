@@ -47,6 +47,7 @@ class _ContactInfoState extends State<ContactInfo> {
           child: Column(
             children: [
               Stack(
+
                 children: [
                   Center(
                     child: Padding(
