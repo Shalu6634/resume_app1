@@ -3,6 +3,7 @@ import 'package:resume_app1/screens/homeScreen/Education.dart';
 import 'package:resume_app1/screens/homeScreen/Experience.dart';
 import 'package:resume_app1/screens/homeScreen/Projects.dart';
 import 'package:resume_app1/screens/homeScreen/Skills.dart';
+import 'package:resume_app1/screens/homeScreen/login%20page/login.dart';
 import 'package:resume_app1/screens/homeScreen/pdf/pdfScreen.dart';
 import '../screens/Splash/SplashScreen.dart';
 import '../screens/homeScreen/ContactInfo.dart';
@@ -16,7 +17,7 @@ class AppRoutes
 {
   static Map<String, Widget Function(BuildContext)> routes  =   {
 
-    '/':(context)=>const SplashScreen(),
+    '/log':(context)=>const SplashScreen(),
     '/person':(context)=>const PersonalStatement(),
     '/draw':(context) => const DrawerPage(),
      '/info':(context)=> const ContactInfo(),
@@ -25,7 +26,8 @@ class AppRoutes
      '/skill':(context)=> const SkillsScreen(),
      '/ref':(context)=> const ReferenceScreen(),
      '/pro':(context)=> const ProjectsScreen(),
-     '/pdf':(context)=>  PdfScreen(),
+     '/pdf':(context)=>  const PdfScreen(),
+     '/':(context)=>  const LoginPage(),
   };
 
 }

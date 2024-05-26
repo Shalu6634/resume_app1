@@ -15,6 +15,7 @@ class _PersonalStatementState extends State<PersonalStatement> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        title: Text('Personal Statement',style: TextStyle(color: Colors.white),),
         backgroundColor: Color(0xff1a2838),
         leading: GestureDetector(
           onTap: () {
