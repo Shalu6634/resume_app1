@@ -50,7 +50,7 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
         child: Column(
           children: [
             ...List.generate(
-              controllerList.length,
+              controllerList2.length,
               (index) => Container(
                 // padding: EdgeInsets.all(15),
                 margin: EdgeInsets.all(15),
@@ -66,22 +66,22 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
                       height: 10,
                     ),
                     buildTextFormField(
-                        'project Title', controllerList[index].txtProTitle!),
+                        'project Title', controllerList2[index].txtProTitle!),
                     SizedBox(
                       height: 10,
                     ),
                     buildTextFormField(
-                        'Details', controllerList[index].txtProDetail!),
+                        'Details', controllerList2[index].txtProDetail!),
                     SizedBox(
                       height: 10,
                     ),
                     buildTextFormField(
-                        'Start Year', controllerList[index].txtStartYear!),
+                        'Start Year', controllerList2[index].txtStartYear!),
                     SizedBox(
                       height: 10,
                     ),
                     buildTextFormField(
-                        'End Year', controllerList[index].txtEndYear!),
+                        'End Year', controllerList2[index].txtEndYear!),
                   ],
 
                 ),
@@ -151,7 +151,7 @@ class ControllerModel {
       this.txtStartYear});
 }
 
-List<ControllerModel> controllerList = [
+List<ControllerModel> controllerList2 = [
   ControllerModel(
       txtEndYear: txtEndYear,
       txtProDetail: txtProDetail,

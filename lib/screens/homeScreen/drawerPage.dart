@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DrawerPage extends StatefulWidget {
@@ -15,6 +16,16 @@ class _DrawerPageState extends State<DrawerPage> {
 
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          GestureDetector(onTap: (){
+            Navigator.of(context).pushNamed('/pdf');
+          },child: Icon(Icons.remove_red_eye,color: Colors.white,)),
+          SizedBox(width: 5,),
+          Text('ViewCV',style: TextStyle(color: Colors.white,
+          fontSize: 15),),
+          SizedBox(width: 5,),
+        ],
+        title: Text('Resume Builder',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
         backgroundColor: Colors.blueGrey,
       ),
       drawer: Drawer(
@@ -203,6 +214,22 @@ class _DrawerPageState extends State<DrawerPage> {
                   ),
                   title: Text(
                     'Reference',
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/pdf');
+                },
+                child: const ListTile(
+                  leading: Icon(
+                    Icons.remove_red_eye_outlined,
+                    size: 25,
+                    color: Colors.blueGrey,
+                  ),
+                  title: Text(
+                    'View CV',
                     style: TextStyle(color: Colors.black, fontSize: 18),
                   ),
                 ),

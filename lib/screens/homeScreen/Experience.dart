@@ -50,7 +50,7 @@ class _ExperienceDetailState extends State<ExperienceDetail> {
         child: Column(
           children: [
             ...List.generate(
-              controllerList.length,
+              controllerList1.length,
               (index) => Container(
                   // padding: EdgeInsets.all(15),
                   margin: EdgeInsets.all(15),
@@ -86,7 +86,7 @@ class _ExperienceDetailState extends State<ExperienceDetail> {
                               GestureDetector(
                                 onTap: () {
                                   setState(() {
-                                    controllerList.removeAt(index - 1);
+                                    controllerList1.removeAt(index - 1);
                                   });
                                 },
                                 child: Icon(
@@ -102,27 +102,27 @@ class _ExperienceDetailState extends State<ExperienceDetail> {
                         height: 10,
                       ),
                       buildTextFormField('Company name',
-                          controllerList[index].txtCompany!),
+                          controllerList1[index].txtCompany!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Job title', controllerList[index].txtPosition!),
+                          'Job title', controllerList1[index].txtPosition!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Start date', controllerList[index].txtSYear!),
+                          'Start date', controllerList1[index].txtSYear!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'End year', controllerList[index].txtEYear!),
+                          'End year', controllerList1[index].txtEYear!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Details', controllerList[index].txtDetail!),
+                          'Details', controllerList1[index].txtDetail!),
                     ],
                   )),
             ),
@@ -132,7 +132,7 @@ class _ExperienceDetailState extends State<ExperienceDetail> {
       floatingActionButton: GestureDetector(
         onTap: () {
           setState(() {
-            controllerList.add(ControllerModel(
+            controllerList1.add(ControllerModel(
                 txtCompany: txtCompany,
                 txtDetail: txtDetail,
                 txtEYear: txtEYear,
@@ -200,7 +200,7 @@ class ControllerModel {
       this.txtDetail});
 }
 
-List<ControllerModel> controllerList = [
+List<ControllerModel> controllerList1 = [
   ControllerModel(
     txtCompany: txtCompany,
     txtPosition: txtPosition,

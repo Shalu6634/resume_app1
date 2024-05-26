@@ -3,6 +3,7 @@ import 'package:resume_app1/screens/homeScreen/Education.dart';
 import 'package:resume_app1/screens/homeScreen/Experience.dart';
 import 'package:resume_app1/screens/homeScreen/Projects.dart';
 import 'package:resume_app1/screens/homeScreen/Skills.dart';
+import 'package:resume_app1/screens/homeScreen/pdf/pdfScreen.dart';
 import '../screens/Splash/SplashScreen.dart';
 import '../screens/homeScreen/ContactInfo.dart';
 import '../screens/homeScreen/PersonalStatement.dart';
@@ -24,8 +25,7 @@ class AppRoutes
      '/skill':(context)=> const SkillsScreen(),
      '/ref':(context)=> const ReferenceScreen(),
      '/pro':(context)=> const ProjectsScreen(),
-
-
+     '/pdf':(context)=>  PdfScreen(),
   };
 
 }

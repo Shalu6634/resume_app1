@@ -51,7 +51,7 @@ class _ReferenceScreenState extends State<ReferenceScreen> {
         child: Column(
           children: [
             ...List.generate(
-              controllerList.length,
+              controllerList3.length,
                   (index) => Container(
                 // padding: EdgeInsets.all(15),
                   margin: EdgeInsets.all(15),
@@ -69,7 +69,7 @@ class _ReferenceScreenState extends State<ReferenceScreen> {
                         child: Container(
                           height: height * 0.1-50 ,
                           width: width * 0.9,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xff1a2838),
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(15),
@@ -87,7 +87,7 @@ class _ReferenceScreenState extends State<ReferenceScreen> {
                               GestureDetector(
                                 onTap: () {
                                   setState(() {
-                                    controllerList.removeAt(index - 1);
+                                    controllerList3.removeAt(index - 1);
                                   });
                                 },
                                 child: Icon(
@@ -103,68 +103,32 @@ class _ReferenceScreenState extends State<ReferenceScreen> {
                         height: 10,
                       ),
                       buildTextFormField('Reference name',
-                          controllerList[index].txtRefName!),
+                          controllerList3[index].txtRefName!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Jop title', controllerList[index].txtTitle!),
+                          'Jop title', controllerList3[index].txtTitle!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Company name', controllerList[index].txtComName!),
+                          'Company name', controllerList3[index].txtComName!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Email', controllerList[index].txtEmail2!),
+                          'Email', controllerList3[index].txtEmail2!),
                       SizedBox(
                         height: 10,
                       ),
                       buildTextFormField(
-                          'Phone number', controllerList[index].txtPhone2!),
+                          'Phone number', controllerList3[index].txtPhone2!),
                     ],
                   )),
             ),
           ],
         ),
-      ),
-      floatingActionButton: GestureDetector(
-        onTap: () {
-          setState(() {
-            controllerList.add(ControllerModel(
-               txtComName: txtComName,
-            txtEmail2: txtEmail2,
-            txtPhone2: txtPhone2,
-            txtRefName: txtRefName,
-            txtTitle: txtTitle));
-          });
-        },
-        child: Container(
-            height: 45,
-            width: 100,
-            decoration: BoxDecoration(
-              color: Color(0xff1a2838),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.add,
-                  size: 30,
-                  color: Colors.white,
-                ),
-                Text(
-                  'Add',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            )),
       ),
     );
   }
@@ -199,7 +163,7 @@ class ControllerModel {
       {this.txtPhone2, this.txtTitle, this.txtRefName, this.txtEmail2,this.txtComName});
 }
 
-List<ControllerModel> controllerList = [
+List<ControllerModel> controllerList3 = [
   ControllerModel(
       txtComName: txtComName,
       txtEmail2: txtEmail2,

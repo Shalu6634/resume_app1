@@ -13,6 +13,7 @@ TextEditingController txtEmail = TextEditingController();
 TextEditingController txtName = TextEditingController();
 TextEditingController txtPhone = TextEditingController();
 TextEditingController txtAddress = TextEditingController();
+TextEditingController txtBirthday = TextEditingController();
 
 GlobalKey<FormState> formKey = GlobalKey();
 
@@ -166,8 +167,10 @@ class _ContactInfoState extends State<ContactInfo> {
                 width: width * 0.9,
                 height: height * 0.1 - 30,
                 child: TextFormField(
-                  controller: txtAddress,
+                  controller: txtBirthday,
+
                   decoration: const InputDecoration(
+                    hintText: 'dd/mm/yy',
                     labelText: 'Date of Birth',
                     focusedBorder: OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(),
