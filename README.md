@@ -3,6 +3,7 @@
 
 <p>
   <img src = "https://github.com/Shalu6634/resume_app1/assets/149373622/f9a443ea-aeb6-4ec1-b02b-21feda58513d" width = 25%  height = 25%>
+    <img src = "https://github.com/Shalu6634/resume_app1/assets/149373622/0294bfe7-9c95-4cfe-9a4b-f0844276aa56" width = 25%  height = 25%>
   <img src = "https://github.com/Shalu6634/resume_app1/assets/149373622/4288da47-c788-4cae-895c-2e6f04f9b200" width = 25%  height = 25%>
   <img src = "https://github.com/Shalu6634/resume_app1/assets/149373622/dfe4b740-da1b-46c2-84a4-b92fafe7dcdb" width = 25%  height = 25%>
   <img src = "https://github.com/Shalu6634/resume_app1/assets/149373622/f2cc41e5-1206-4405-9149-8b23264803ee" width = 25%  height = 25%>
