@@ -17,7 +17,7 @@ class AppRoutes
 {
   static Map<String, Widget Function(BuildContext)> routes  =   {
 
-    '/log':(context)=>const SplashScreen(),
+    '/':(context)=>const SplashScreen(),
     '/person':(context)=>const PersonalStatement(),
     '/draw':(context) => const DrawerPage(),
      '/info':(context)=> const ContactInfo(),
@@ -27,7 +27,7 @@ class AppRoutes
      '/ref':(context)=> const ReferenceScreen(),
      '/pro':(context)=> const ProjectsScreen(),
      '/pdf':(context)=>  const PdfScreen(),
-     '/':(context)=>  const LoginPage(),
+     '/log':(context)=>  const LoginPage(),
   };
 
 }

@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 class DrawerPage extends StatefulWidget {
   const DrawerPage({super.key});
@@ -71,7 +71,7 @@ class _DrawerPageState extends State<DrawerPage> {
                     child: Row(
                       children: [
                         Text(
-                          'CV Engineer  ',
+                          'CV Engineer',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,

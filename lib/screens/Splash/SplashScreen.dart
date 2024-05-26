@@ -11,8 +11,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
-    Navigator.of(context).pushNamed('/draw');
+    Timer(Duration(seconds: 4), () {
+    Navigator.of(context).pushNamed('/log');
     });
     return Scaffold(
       backgroundColor: Color(0xff153448),
